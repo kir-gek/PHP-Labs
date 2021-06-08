@@ -9,8 +9,8 @@
 </head>
 <body>
 <header class="header">
-		<img class="header__logo-img" src="img/logo.jpg" alt="Mospolytech">
-		<a href="/" class="header__logo">№6 | Гекман Кирилл</a>
+		<a href="../index.html"><img class="header__logo-img"  src="./img/logo.jpg" alt="Mospolytech"></a>	
+		<p class="header__logo">№7 | Гекман Кирилл</p>
 	</header>
     <main>
     <?php
@@ -116,6 +116,7 @@
 
     ?>
 	</main>
+	<footer><a style="color:white;" href="https://github.com/kir-gek/PHP-Labs/tree/main/PHP-Lab6" >github.com/kir-gek/PHP-Labs/tree/main/PHP-Lab6</a></footer>
 
 </body>
 </html>
