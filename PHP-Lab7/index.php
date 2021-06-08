@@ -1,4 +1,19 @@
-<main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab7_Gekman</title>
+</head>
+<body>
+<header class="header">
+        <a href="../index.html"><img class="header__logo-img"  src="./img/logo.jpg" alt="Mospolytech"></a>	
+		<p class="header__logo">№7 | Гекман Кирилл</p>
+	</header>
+
+    <main>
     <form name="Test" method="POST" class="main-form" action="sort.php" target="_blank">   
         <div>
             <h3>Таблица элементов</h3> 
@@ -30,5 +45,8 @@
         </div>
     </form>
 </main>
-
-<footer></footer>
+<footer><a style="color:white;" href="https://github.com/kir-gek/PHP-Labs/tree/main/PHP-Lab7" >github.com/kir-gek/PHP-Labs/tree/main/PHP-Lab7</a></footer>
+<script src="script.js"></script>
+    
+</body>
+</html>
