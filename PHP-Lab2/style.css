@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lemonada', cursive;
+    font-size: 15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/******************* HEADER *******************/
+table{
+    border-collapse: collapse;
+border: 1px solid black;
+width: 50%;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00796B;
+    display: flex;
+    justify-content: left;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    align-items: center;
+}
+
+.menu_item {
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.menu_item:hover {
+    color: #009688;
+}
+
+header .active {
+    color: #009688;
+}
+
+/******************* INRODUCE SECTION *******************/
+
+
+.introduce {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #009688;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_title {
+    color: #fff;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.sub_title {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.flex_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+
+.wrapper{
+    padding-bottom: 50px;
+}
+
+
+
+.prices table {
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    border: 1px solid black;
+}
+
+.prices table td {
+    border: 4px double black;
+    border-collapse: collapse 1px solid #000;
+
+}
+
+/******************* FOOTER *******************/
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #919191;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.bblock {
+    border:2px solid red;
+	display: table-cell; 
+        font-size: 32px;
+  	width: 200px;
+        height: 200px;
+	background: gold;
+        text-align: center;
+        vertical-align: middle;
+}
+ 
+.wrap {
+  display: table;  
+  border-spacing: 8px 8px; 
+  background-color: darkgray;
+}
+
+.card{
+    border: 2px solid red;
+    width: 20%;
+    display: inline-block;
+    border-spacing: 8px 8px;
+}
+
+.menurow{
+    background-color: rgb(255, 255, 255);
+    display:flex;
+    flex-direction: row;
+    margin: 3% auto;
+    width: 100%;
+    text-align: center;
+}
+.card_row{
+    border: 2px solid red;
+    width: 20%;
+    margin: auto;
+    border-spacing: 8px 8px; 
+}
+
+h2{
+    text-align: center;
+}
+img{
+    width: 10%;
+}
