@@ -15,8 +15,12 @@
             $sql_res=mysqli_query($mysqli, 'SELECT * FROM info');
          
             
-        else 
-        $sql_res=mysqli_query($mysqli, 'SELECT * FROM info ORDER BY lastName');
+        else {
+            if( $_GET['sort']=='born') 
+            $sql_res=mysqli_query($mysqli, 'SELECT * FROM info ORDER BY dataBirth');
+            else
+            $sql_res=mysqli_query($mysqli, 'SELECT * FROM info ORDER BY lastName');
+        }
         $alldata=array();
         while($row = mysqli_fetch_array($sql_res)){
             $alldata[] = $row;

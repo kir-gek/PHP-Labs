@@ -57,7 +57,7 @@
             //     VALUES ('Тестовое Имя')";
             
             If(mysqli_query($mysqli,$textSQL))
-                echo "<div>Данные записаны</div>";
+                echo "<div>id=".mysqli_insert_id($mysqli)." Данные записаны</div>";
             else 
                 echo "Error:".mysqli_error($mysqli); 
         } else {
