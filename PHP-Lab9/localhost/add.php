@@ -7,6 +7,28 @@
 </head>
 <body>
     
+<!-- <form name="form_add" method="post" action="?p=add">
+<input type="text" name="name" id="name" placeholder="Имя">
+<textarea name="comment" placeholder="Краткий комментарий"></textarea>
+<input type="submit" name="button" value="Добавить запись">
+</form>
+<?php
+// если были переданы данные для добавления в БД
+// if( isset($_POST['button']) && $_POST['button']== 'Добавить запись')
+// {
+//     $mysqli = mysqli_connect('localhost', 'moosbeere', '12345678', 'friends');
+//     if( mysqli_connect_errno() ) // проверяем корректность подключения
+//     echo 'Ошибка подключения к БД: '.mysqli_connect_error();
+//     // формируем и выполняем SQL-запрос для добавления записи
+//     $sql_res=mysqli_query($mysqli, 'INSERT INTO friends (name) VALUES ("vova")');
+//     // если при выполнении запроса произошла ошибка – выводим сообщение
+//     if( mysqli_errno($mysqli) )
+//         echo '<div class="error">Запись не добавлена</div>';
+//     else // если все прошло нормально – выводим сообщение
+//         echo '<div class="ok">Запись добавлена</div>';
+// }
+?> -->
+
 <div id="add">
 <form name="form_add" method="POST" action="#">
     <input type="text" name="lastName" id="name" placeholder="Фамилия">
@@ -52,7 +74,7 @@
             //     VALUES ('Тестовое Имя')";
             
             If(mysqli_query($mysqli,$textSQL))
-                echo "<div>Данные записаны</div>";
+                echo "<div>id=".mysqli_insert_id($mysqli)." Данные записаны</div>";
             else 
                 echo "Error:".mysqli_error($mysqli); 
         } else {

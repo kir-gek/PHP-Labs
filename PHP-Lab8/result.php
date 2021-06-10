@@ -40,7 +40,7 @@
                         $Punctuation=array( '`'=>true, '~'=>true, '!'=>true, '@'=>true, '"'=>true,
                         '№'=>true, '#'=>true, '$'=>true, ';'=>true, '%'=>true, '^'=>true, ':'=>true, '?'=>true
                         , '&'=>true, '*'=>true, '('=>true, ')'=>true, '-'=>true, '_'=>true, '+'=>true, '='=>true
-                        , "'"=>true, '}'=>true, '{'=>true, '['=>true, ']'=>true, '/'=>true, '"\"'=>true, '|'=>true, '.'=>true );     // вводим переменные для хранения информации о:
+                        , "'"=>true, '}'=>true, '{'=>true, '['=>true, ']'=>true, '/'=>true, '"\"'=>true, '|'=>true, '.'=>true, ','=>true );     // вводим переменные для хранения информации о:
                         $cifra_amount=0; // количество цифр в тексте
                         $word=''; // текущее слово
                         $countPunctuation=0 ;
@@ -94,24 +94,24 @@
                         $countLetter=$redi[0]+$redi[1];
                         echo 'Количество букв: '.$countLetter,'<br>';
                         echo 'Количество использования слов<br>';
-                        writeWord($text, $Punctuation);
+                        writeWord($text, $Punctuation,$cifra);
     
 
                     }
 
-
-                function writeWord($text, $Punctuation){
+                    //&& ($text[$i]!=0) && ($text[$i]!=1) && ($text[$i]!=2) && ($text[$i]!=3) && ($text[$i]!=4) && ($text[$i]!=5) && ($text[$i]!=6) && ($text[$i]!=7) && ($text[$i]!=8) && ($text[$i]!=9)
+                function writeWord($text, $Punctuation,$cifra){
                     $word = '';
                     $countSpace=0;
                     for($i=0; $i<strlen($text); $i++) // перебираем все символы текста
                         {
                             
-                            if( $text[$i]==' ' || array_key_exists($text[$i], $Punctuation) || $i == strlen($text)-1)
+                            if( $text[$i]==' ' || array_key_exists($text[$i], $Punctuation) ||  $i == strlen($text)-1 || array_key_exists($text[$i], $cifra)==true )
                             {
-                                if ($text==' '){
+                                if (($text==' ')){
                                     $countSpace+=1;
                                 }
-                                if($i == strlen($text)-1){
+                                if(($i == strlen($text)-1) && array_key_exists($text[$i], $cifra)==false ) {
                                     $word.=$text[$i];
                                 }
                                 if( $word ) // если есть текущее слово
